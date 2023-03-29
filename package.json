@@ -1,6 +1,6 @@
 {
   "name": "angular-tour-of-heroes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "ng": "ng",
     "this": "ng serve -o --port=4200",

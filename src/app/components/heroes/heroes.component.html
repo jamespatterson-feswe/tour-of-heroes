@@ -6,16 +6,6 @@
       <span class="badge">{{hero.id}}</span>
       <span class="name">{{ hero.name | uppercase }}</span>
     </button>
-    <div *ngIf="selectedHero && selectedHero.id === hero.id" class="hero-details-container">
-      <h3>Details for hero</h3>
-      <div class="hero input">
-        <label for="hero-name">Hero name: </label>
-        <input type="text" id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-      </div>
-      <div class="hero input">
-        <label for="hero-ability">Hero ability: </label>
-        <input type="text" id="hero-ability" [(ngModel)]="selectedHero.ability" placeholder="ability">
-      </div>
-    </div>
+    <app-hero-details *ngIf="selectedHero && selectedHero.id === hero.id"  [hero]="selectedHero"></app-hero-details>
   </li>
 </ul>

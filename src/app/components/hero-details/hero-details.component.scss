@@ -1,0 +1,29 @@
+.hero {
+  display: flex;
+
+  &.container {
+    flex-direction: column;
+  }
+
+  &.input {
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+
+    label {
+      margin-left: 1.5em;
+    }
+
+    input {
+      width: 60%;
+    }
+  }
+
+  &.deceased {
+    color: darkred;
+  }
+}
+
+.hero-details-container {
+  margin-left: 1em;
+}

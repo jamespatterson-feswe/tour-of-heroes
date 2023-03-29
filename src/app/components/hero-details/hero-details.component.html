@@ -1,0 +1,14 @@
+<div class="hero-details-container" *ngIf="hero">
+  <h3>Details for hero</h3>
+  <div class="hero input">
+    <label for="hero-name">Hero name: </label>
+    <input type="text" id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+  <div class="hero input">
+    <label for="hero-ability">Hero ability: </label>
+    <input type="text" id="hero-ability" [(ngModel)]="hero.ability" placeholder="ability">
+  </div>
+  <div class="hero input deceased" *ngIf="!hero.alive">
+    <label for="hero-deceased">Deceased</label>
+  </div>
+</div>
