@@ -1,0 +1,6 @@
+<div class="player-details" *ngIf="{data: player | async} as player">
+  <span>Name: {{ player.data?.name }}</span>
+  <span>Level: {{ player.data?.level }}</span>
+  <span>HP: {{ player.data?.hp }}</span>
+  <span>MP: {{ player.data?.mp }}</span>
+</div>

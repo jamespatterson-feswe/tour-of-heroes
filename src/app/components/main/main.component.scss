@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.header-container, .footer-container {
+  background-color: var(--primary);
+  height: 5vh;
+  width: 100%;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.canvas {
+  background-color: var(--canvas-bg);
+  height: calc(100% - 5vh);
+  width: calc(100% - 5vh);
+}
