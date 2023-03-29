@@ -1,7 +1,7 @@
 .header {
   align-items: center;
   color: var(--text);
-  text-shadow: #282C34 2px 2px 10px;
+  text-shadow: var(--bg) 2px 2px 10px;
   display: flex;
   flex-direction: row;
   height: 100%;
