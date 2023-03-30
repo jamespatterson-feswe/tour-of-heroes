@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 /** helpers */
 import { heroes } from '../../helpers/constants';
 /** interfaces */
@@ -10,19 +11,28 @@ import { HeroService } from '../../services/hero/hero.service';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.scss']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesComponent implements OnInit, OnDestroy {
 
+  public subscription: Subscription;
   public heroes: Hero[];
   public selectedHero: Hero | null = null;
 
   constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
-    this.heroService.getHeroes().subscribe({
+    this.subscription = this.heroService.getHeroes().subscribe({
       next: (heroes: Hero[]) => {
         this.heroes = heroes;
-      }
+      },
+      error: (error: unknown) => {
+        console.error(error);
+      },
+      complete: () => console.log('completed')
     })
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   public onHeroSelection(hero: Hero): void {
