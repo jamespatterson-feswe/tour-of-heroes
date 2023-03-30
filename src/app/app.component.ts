@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <app-messages></app-messages>
     <h1>{{ title }}</h1>
-    <app-heroes></app-heroes>
+    <nav>
+      <a routerLink="/heroes">View Heroes</a>
+    </nav>
+    <!-- <app-heroes></app-heroes> -->
+    <router-outlet></router-outlet>
   `
 })
 export class AppComponent {
