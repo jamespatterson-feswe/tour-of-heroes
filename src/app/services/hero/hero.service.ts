@@ -5,6 +5,7 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 import { heroes } from '../../helpers/constants';
 /** interfaces */
 import { Hero } from '../../models/hero.interface';
+/** services */
 
 @Injectable({
   providedIn: 'root'
