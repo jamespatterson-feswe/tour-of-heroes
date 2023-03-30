@@ -15,7 +15,6 @@ import { MessagesService } from '../../services/messages/messages.service';
 export class HeroesComponent implements OnInit {
 
   public heroes: Hero[];
-  public selectedHero: Hero | null = null;
 
   constructor(private heroService: HeroService, private msgService: MessagesService) {}
 
@@ -30,10 +29,6 @@ export class HeroesComponent implements OnInit {
         console.error(error);
       }
     })
-  }
-
-  public onHeroSelection(hero: Hero): void {
-    this.selectedHero = this.selectedHero?.id === hero?.id ? null : hero ?? null;
   }
 
 }

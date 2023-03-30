@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
       error: (err: unknown) => {
         console.error(err);
       }
-    })
+    });
   }
 
 }

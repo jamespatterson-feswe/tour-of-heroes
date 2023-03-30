@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   template: `
     <app-messages></app-messages>
     <h1>{{ title }}</h1>
-    <nav *ngIf="allowLocation()">
+    <nav *ngIf="allowLocation()" style="display: flex; flex-direction: row; gap: 20px;">
+      <a routerLink="/dashboard">Dashboard</a>
       <a routerLink="/heroes">View Heroes</a>
     </nav>
     <!-- <app-heroes></app-heroes> -->
